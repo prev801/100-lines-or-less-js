@@ -1,29 +1,17 @@
 dojo.require("esri.map");
 var map;
 var myPano;
-<<<<<<< HEAD
-
-function init_AGS(pLat,pLon) {
-	var options = {basemap:"gray", center:[pLon, pLat], zoom: 15, slider:false};
-	map = new esri.Map("mapDiv",options);
-=======
 function init_AGS(pLat,pLon) {
 	var options = {basemap:"gray", center:[pLon, pLat], zoom: 15, slider:false};
   	map = new esri.Map("mapDiv",options);
->>>>>>> moved JS form HTM to JS file
 	wid_biz_stat.onLoad();
 	wid_biz_stat.sendToServer(pLat,pLon);
 }
 function init_GE_StreetView(pLat,pLon) {
 	var panoramaOpt = {
 		position: new google.maps.LatLng(pLat, pLon),
-<<<<<<< HEAD
-		pov: {heading: 0,pitch: 0,zoom: 1},
-		zoomControl:false,
-=======
         pov: {heading: 0,pitch: 0,zoom: 1},
         zoomControl:false,
->>>>>>> moved JS form HTM to JS file
         addressControl:false,
         panControl:false};
     myPano = new google.maps.StreetViewPanorama(dojo.byId('pano'), panoramaOpt);
@@ -104,8 +92,4 @@ var wid_biz_stat = {
 		dojo.byId('biz_info').innerHTML = s + "</table>";
 	}	
 };
-<<<<<<< HEAD
 dojo.addOnLoad(init_getUserLocation);
-=======
-dojo.addOnLoad(init_getUserLocation);
->>>>>>> moved JS form HTM to JS file
